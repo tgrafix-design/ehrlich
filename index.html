@@ -113,12 +113,19 @@
         </ul>
     </section>
 
+    <style>
+        .buy {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
     <section class="recently-bought">
         <h2>Recently Bought</h2>
-        <ul>
-            <li><img src="img/recently-bought/festive-looks-rust.jpg" alt="Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit"><p>Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</p><p><span>$38</span></p></li>
-            <li><img src="img/recently-bought/chevron-flap-crossbody.jpg" alt="Chevron Flap Crossbody Bag"><p>Chevron Flap Crossbody Bag<br /> <br/></p><p class="sale"><span>$5.77<del>$7.35</del></span></p></li>
-            <li><img src="img/recently-bought/manila-tan-multi-plaid.jpg" alt="Manila Tan Multi Plaid Oversized Fringe Scarf"><p>Manila Tan Multi Plaid Oversized Fringe Scarf</p><p class="sale"><span>$29<del>$39</del></span></p></li>
+        <ul class="products">
+            <li><img src="img/recently-bought/festive-looks-rust.jpg" alt="Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit"><p>Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</p><p class="buy"><span>$38</span><button>Buy</button></p></li>
+            <li><img src="img/recently-bought/chevron-flap-crossbody.jpg" alt="Chevron Flap Crossbody Bag"><p>Chevron Flap Crossbody Bag<br /> <br/></p><p class="sale buy"><span>$5.77<del>$7.35</del></span></p></li>
+            <li><img src="img/recently-bought/manila-tan-multi-plaid.jpg" alt="Manila Tan Multi Plaid Oversized Fringe Scarf"><p>Manila Tan Multi Plaid Oversized Fringe Scarf</p><p class="sale buy"><span>$29<del>$39</del></span></p></li>
             <li><img src="img/recently-bought/diamante-puff-sleeve.jpg" alt="Diamante Puff Sleeve Dress - Black"><p>Diamante Puff Sleeve Dress - Black</p><p><span>$45.99</span></p></li>
             <li><img src="img/recently-bought/banneth-open-front.jpg" alt="Banneth Open Front Formal Dress in Black"><p>Banneth Open Front Formal Dress in Black</p><p class="sale"><span>$69<del>$99.95</del></span></p></li>
         </ul>
@@ -202,6 +209,29 @@
         <a href="#"><img src="img/header-icons/logo.svg" alt="Threaded Fashion"></a>
     </div>
 
+    <script>
+        let products = document.querySelector(".products")
+            products.innerHTML = ""
+            console.log(products)
+
+        const fetchUser = async (userId) => {
+            const response = await fetch('js/data.json')
+            const result = await response.json()
+
+            result.forEach((result) => {
+                console.log(result.description)
+                let status = "buy"
+                let price = `${result.orig_price}`
+                if (result.sale_price) { 
+                    status = "buy sale"
+                    price = `${result.sale_price}<del>${result.orig_price}</del>`
+                }
+                products.innerHTML =  `${products.innerHTML}<li><img src="img/recently-bought/${result.photo}" alt="${result.description}"><p>${result.description}</p><p class="${status}"><span>${price}</span><button>Buy</button></p></li>`
+            })
+        }
+
+        fetchUser()
+    </script>
 </body>
 </html>
 
