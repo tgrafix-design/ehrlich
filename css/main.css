@@ -156,3 +156,155 @@ header .right-nav ul li {
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
 }
+
+/* Site Wide Deals */
+.site-wide-deals {
+    position: relative;
+    display: block;
+    height: 100px;
+    padding: 50px 24px 0;
+}
+
+.site-wide-deals ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-wide-deals ul li {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.site-wide-deals ul li span {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.site-wide-deals ul li em {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 800;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.site-wide-deals ul li p {
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.site-wide-deals ul li button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* VIP Exclusive*/
+.vip-exclusive {
+    position: relative;
+    display: block;
+    height: 75px;
+    padding-bottom: 0;
+    background: #000000 url(../img/hero/black-friday-BG.png) no-repeat left center;
+    background-size: auto 70px;
+}
+
+.vip-exclusive ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.vip-exclusive ul h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.vip-exclusive ul p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.vip-exclusive ul button {
+    width: 150px;
+    height: 42px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+}
+
+/* Trending */
+.trending {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 1060px;
+    padding: 60px;
+}
+
+.trending h2 {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.trending p {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.trending ul.dress {
+    display: grid;
+    grid-template-columns: 225px 225px 225px 225px;
+    grid-gap: 50px 40px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.trending ul.dress li img {
+    display: block;
+    width: 225px;
+}
+
+.trending ul.dress li p {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+.trending ul.hashtag {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.trending ul.hashtag a {
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    margin: 10px;
+}

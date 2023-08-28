@@ -26,15 +26,15 @@
             </ul> 
         </div>
         <div class="logo">
-            <img src="img/header-icons/logo.svg" alt="">
+            <a href="#"><img src="img/header-icons/logo.svg" alt="Threaded Fashion"></a>
         </div>
         <div class="right-nav">
             <ul>
-                <li><img src="img/header-icons/user.svg" alt=""></li>
-                <li><img src="img/header-icons/shopping-bag.svg" alt=""></li>
-                <li><img src="img/header-icons/heart.svg" alt=""></li>
-                <li><img src="img/header-icons/support.svg" alt=""></li>
-                <li><img src="img/header-icons/search.svg" alt=""></li>
+                <li><img src="img/header-icons/user.svg" alt="User"></li>
+                <li><img src="img/header-icons/shopping-bag.svg" alt="Shopping"></li>
+                <li><img src="img/header-icons/heart.svg" alt="Favorites"></li>
+                <li><img src="img/header-icons/support.svg" alt="Support"></li>
+                <li><img src="img/header-icons/search.svg" alt="Search"></li>
             </ul> 
             <div class="currency">
                 <select name="currency" id="currency">
@@ -60,92 +60,6 @@
         <button>Shop Now</button>
     </div>
     </section>
-
-   <style>
-    /* Site Wide Deals */
-        .site-wide-deals {
-            position: relative;
-            display: block;
-            height: 100px;
-            padding: 50px 24px 0;
-        }
-
-        .site-wide-deals ul {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .site-wide-deals ul li {
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        .site-wide-deals ul li span {
-            display: inline-block;
-            font-size: 32px;
-            font-weight: 600;
-            text-transform: uppercase;
-            vertical-align: middle;
-        }
-
-        .site-wide-deals ul li em {
-            display: inline-block;
-            font-size: 18px;
-            font-weight: 800;
-            vertical-align: middle;
-            margin-left: 8px;
-        }
-
-        .site-wide-deals ul li p {
-            font-size: 10px;
-            font-weight: 400;
-            margin-top: 10px;
-        }
-
-        .site-wide-deals ul li button {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-            text-transform: uppercase;
-            border: none;
-            font-size: 18px;
-            font-weight: 600;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        /* VIP Exclusive*/
-        .vip-exclusive {
-            position: relative;
-            display: block;
-            height: 75px;
-            padding-bottom: 0;
-            background: #000000 url(../img/hero/black-friday-BG.png) no-repeat left center;
-            background-size: auto 70px;
-        }
-
-        .vip-exclusive ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding-top: 20px;
-        }
-
-        .vip-exclusive ul h2 {
-            font-size: 32px;
-            font-weight: 800;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-
-        .vip-exclusive ul p {
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-   </style>
-
    <section class="site-wide-deals">
         <ul>
             <li><span>$5</span><em>off</em><p>on orders above $50</p></li>
@@ -159,8 +73,105 @@
    <section class="vip-exclusive">
         <ul>
             <li><h2>Black Friday Exclusive</h2></li>
-            <li><p>Free Shipping on all orders for VIP 2 and up!</p></li>
+            <li><p>Free Shipping on all orders for <br />VIP 2 and up!</p></li>
+            <li><button>Shop Now</button></li>
+        </ul>
+    </section>
+
+    <style>
+        .trending {
+            display: block;
+            margin: 0 auto;
+            width: auto;
+            max-width: 1060px;
+            padding: 60px;
+        }
+
+        .trending h2 {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .trending p {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .trending ul.dress {
+            display: grid;
+            grid-template-columns: 225px 225px 225px 225px;
+            grid-gap: 50px 40px;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .trending ul.dress li img {
+            display: block;
+            width: 225px;
+        }
+
+        .trending ul.dress li p {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 16px;
+        }
+
+        .trending ul.hashtag {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .trending ul.hashtag a {
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #000000;
+            border-radius: 50px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #000000;
+            margin: 10px;
+        }
+    </style> 
+
+    <section class="trending">
+        <h2>Now Trending</h2>
+        <p>See what everyone&lsquo;s wearing right now</p>
+        <ul class="dress">
+            <li><img src="img/trending/winter-fashion.jpg" alt="Winter Fashion"><p>Winter Fashion</p></li>
+            <li><img src="img/trending/boots.jpg" alt="Boots"><p>Boots</p></li>
+            <li><img src="img/trending/night-out.jpg" alt="Night Out"><p>Night Out</p></li>
+            <li><img src="img/trending/holidays.jpg" alt="Holidays"><p>Holidays</p></li>
+            <li><img src="img/trending/outerwear.jpg" alt="Outerwear"><p>Outerwear</p></li>
+            <li><img src="img/trending/whitedresses.jpg" alt="White Dresses"><p>White Dresses</p></li>
+            <li><img src="img/trending/sweaters.jpg" alt="Party"><p>Party</p></li>
+            <li><img src="img/trending/party.jpg" alt="Party"><p>Party</p></li>
+        </ul>
+
+        <ul class="hashtag">
+            <li><a href="#">#Thanksgiving</a></li>
+            <li><a href="#">Thanksgiving</a></li>
+            <li><a href="#">#NewYears</a></li>
+            <li><a href="#">#Pajamas</a></li>
+            <li><a href="#">#WFH</a></li>
+            <li><a href="#">#FallFashion</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Recently Bought</h2>
+        <ul class="dress">
+            <li><img src="img/recently-bought/festive-looks-rust.jpg" alt="Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit"><p>Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</p></li>
+            <li><img src="img/recently-bought/chevron-flap-crossbody.jpg" alt="Chevron Flap Crossbody Bag"><p>Chevron Flap Crossbody Bag</p></li>
+            <li><img src="img/recently-bought/manila-tan-multi-plaid.jpg" alt="Manila Tan Multi Plaid Oversized Fringe Scarf"><p>Night Out</p></li>
+            <li><img src="img/recently-bought/diamante-puff-sleeve.jpg" alt="Diamante Puff Sleeve Dress - Black"><p>Holidays</p></li>
+            <li><img src="img/recently-bought/banneth-open-front.jpg" alt="Banneth Open Front Formal Dress in Black"><p>Outerwear</p></li>
         </ul>
     </section>
 </body>
 </html>
+
