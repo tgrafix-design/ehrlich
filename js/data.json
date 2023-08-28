@@ -1,0 +1,38 @@
+[{
+    "id": 1,
+    "product": "Dress",
+    "photo": "festive-looks-rust.jpg", 
+    "orig_price": "38",
+    "description": "Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit"
+},
+{
+    "id": 2,
+    "product": "Bag",
+    "photo": "chevron-flap-crossbody.jpg",
+    "orig_price": "5.77",
+    "sale_price": "7.35",
+    "description": "Chevron Flap Crossbody Bag"
+},
+{
+    "id": 3,
+    "product": "Scarf",
+    "photo": "manila-tan-multi-plaid.jpg",
+    "orig_price": "39",
+    "sale_price": "29",
+    "description": "Manila Tan Multi Plaid Oversized Fringe Scarf"
+},
+{
+    "id": 4,
+    "product": "Dress",
+    "photo": "diamante-puff-sleeve.jpg",
+    "orig_price": "45.99",
+    "description": "Diamante Puff Sleeve Dress - Black"
+},
+{
+    "id": 5,
+    "product": "Dress",
+    "photo": "banneth-open-front.jpg",
+    "orig_price": "99.95",
+    "sale_price": "69",
+    "description": "Banneth Open Front Formal Dress in Black"
+}]
