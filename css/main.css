@@ -1,0 +1,81 @@
+@import url("reset.css");
+
+/* Header */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.main {
+    max-width: 1440px;
+    display: block;
+    margin: 0 auto
+}
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+header .left-nav ul, header .right-nav ul {
+    display: flex;
+    height: 35px;
+    line-height: 17.7px;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: block;
+    max-height: 16px;
+    margin: 0 auto;
+}
+
+header .left-nav ul li {
+    padding: 12px 8px;
+}
+
+header .left-nav ul li:hover {
+    padding: 12px 8px;
+    font-weight: 600;
+}
+
+header .left-nav ul li.selected {
+    font-weight: 600;
+}
+
+header .right-nav {
+    display: flex;
+}
+
+header .right-nav .currency {
+    border: 1px solid #eeeeee;
+    border-radius: 35px;
+    background: url(../img/currency/us.jpg) no-repeat 5px center;
+    background-size: 25px;
+    padding: 0 2px 0 8px;
+}
+
+header .right-nav .currency select {
+    border: none;
+    height: 35px;
+    background: rgba(0, 0, 0, 0);
+    margin-left: 30px;
+}
+
+header .right-nav .currency select option {
+    appearance: none;
+    
+}
+
+header .right-nav ul {
+    align-items: flex-end;
+}
+
+header .right-nav ul li {
+    cursor: pointer;
+    opacity: 50%;
+    padding: 0 8px;
+}
