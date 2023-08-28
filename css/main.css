@@ -310,6 +310,52 @@ header .right-nav ul li {
     margin: 10px;
 }
 
+/* New Arrival */
+.new-arrival {
+    display: block;
+    width: auto;
+    height: 400px;
+    background: url(../img/new-arrivals/new-arrival-full.jpg) no-repeat center center;
+    background-size: auto 400px;
+}
+
+.new-arrival ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.new-arrival h2 {
+    font-size: 82px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.new-arrival p {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 24px;
+}
+
+.new-arrival button {
+    border: none;
+    display: block;
+    overflow: hidden;
+    background-color: #ffffff;;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-top: 48px;
+    -webkit-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+    box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
 /* Recently Bought */
 .recently-bought {
     padding: 60px;
