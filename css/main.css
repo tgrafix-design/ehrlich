@@ -17,7 +17,7 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 24px;
 }
 
 header .left-nav ul, header .right-nav ul {
@@ -83,7 +83,7 @@ header .right-nav ul li {
 /* Section Benefits */
 .benefits {
     background-color: #F2F2F2;
-    padding: 10px 20px;
+    padding: 10px 24px;
 }
 
 .benefits ul {
@@ -93,14 +93,16 @@ header .right-nav ul li {
 
 .benefits ul li {
     font-size: 12px;
-    line-height: 1.2;
 }
 
-.benefits ul li span {
+.benefits ul li a {
     display: block;
-    margin-left: 30px;
+    margin-left: 40px;
+    font-weight: 400;
     height: 30px;
     line-height: 2.5;
+    color: #000000;
+    text-decoration: none;
 }
 
 .benefits ul li:nth-child(1) {
@@ -110,18 +112,22 @@ header .right-nav ul li {
 
 .benefits ul li:nth-child(2) {
     background: url(../img/header-icons/star.svg) no-repeat left center;
+    background-size: 30px;
 }
 
 .benefits ul li:nth-child(3) {
     background: url(../img/header-icons/truck.svg) no-repeat left center;
+    background-size: 30px;
 }
 
 .benefits ul li:nth-child(4) {
     background: url(../img/header-icons/pinmap.svg) no-repeat left center;
+    background-size: 30px;
 }
 
 .benefits ul li:nth-child(5) {
     background: url(../img/header-icons/shop-tag.svg) no-repeat left center;
+    background-size: 30px;
 }
 
 /* HERO Sider */
@@ -130,19 +136,23 @@ header .right-nav ul li {
     width: auto;
     height: 650px;
     background: url(../img/hero/full.jpg) no-repeat center center;
+    background-size: cover;
 }
 .hero-slider button {
     border: none;
     display: block;
     position: absolute;
     overflow: hidden;
+    background-color: #ffffff;;
     right: 249px;
-    bottom: 133px;
-    font-size: 26px;
+    top: 600px;
+    font-size: 36px;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 16px 30px;
     -webkit-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
     -moz-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
     box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
