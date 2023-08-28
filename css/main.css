@@ -459,3 +459,71 @@ header .right-nav ul li {
     display: inline-block;
     width: 20px;
 }
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 12px;
+    padding: 40px 50px 20px 50px;
+}
+
+footer ul li {
+    margin: 20px 0;
+}
+
+footer ul ul {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+    height: 40px;
+}
+
+footer ul ul.social li {
+    margin-right: 8px;
+}
+
+footer ul ul.social li img {
+    cursor: pointer;
+}
+
+footer ul ul.payment li {
+    margin-right: 8px;
+}
+
+footer ul ul.payment li img {
+    width: 37.5px;
+    cursor: pointer;
+}
+
+footer h5 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.left-footer {
+    display: grid;
+    grid-template-columns: 30% 30% auto;
+}
+
+.footer-rights {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding: 0 40px;
+}
+
+.footer-rights p {
+    font-size: 12px;
+    font-weight: 400;
+}
