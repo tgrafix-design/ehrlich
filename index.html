@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
     <title>Erlich Project</title>
@@ -45,26 +45,121 @@
         </div>
     </header>
 
-    <section id="benefits">
+    <section class="benefits">
         <ul>
-            <li class="crown"><span>Exclusive Deals for VIP 2 and up!</span></li>
-            <li class="star"><span>Weekly News Arrivals</span></li>
-            <li class="shipping"><span>Free Shipping On Orders Over $100</span></li>
-            <li class="pinmap"><span>Track Your Order</span></li>
-            <li class="shoptag"><span>10% Off On Your First Order!</span></li>
+            <li class="crown"><a href="#">Exclusive Deals for VIP 2 and up!</a></li>
+            <li class="star"><a href="#">Weekly News Arrivals</a></li>
+            <li class="shipping"><a href="#">Free Shipping On Orders Over $100</a></li>
+            <li class="pinmap"><a href="#">Track Your Order</a></li>
+            <li class="shoptag"><a href="#">10% Off On Your First Order!</a></li>
         </ul>
    </section>
 
-   <style>
+   <section class="hero-slider">
+    <div>
+        <button>Shop Now</button>
+    </div>
+    </section>
 
+   <style>
+    /* Site Wide Deals */
+        .site-wide-deals {
+            position: relative;
+            display: block;
+            height: 100px;
+            padding: 50px 24px 0;
+        }
+
+        .site-wide-deals ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .site-wide-deals ul li {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .site-wide-deals ul li span {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+
+        .site-wide-deals ul li em {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 800;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        .site-wide-deals ul li p {
+            font-size: 10px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .site-wide-deals ul li button {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            text-transform: uppercase;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* VIP Exclusive*/
+        .vip-exclusive {
+            position: relative;
+            display: block;
+            height: 75px;
+            padding-bottom: 0;
+            background: #000000 url(../img/hero/black-friday-BG.png) no-repeat left center;
+            background-size: auto 70px;
+        }
+
+        .vip-exclusive ul {
+
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .vip-exclusive ul h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .vip-exclusive ul p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
    </style>
 
-   <section class="hero-slider">
-        <div>
-            <button>Shop Now</button>
-        </div>
+   <section class="site-wide-deals">
+        <ul>
+            <li><span>$5</span><em>off</em><p>on orders above $50</p></li>
+            <li><span>$15</span><em>off</em><p>on orders above $75</p></li>
+            <li><span>$20</span><em>off</em><p>on orders above $150</p></li>
+            <li><span>$30</span><em>off</em><p>on orders above $200</p></li>
+            <li><button>Check out all site wide deals</button></li>
+        </ul>
    </section>
+
+   <section class="vip-exclusive">
+    <ul>
+        <li><h2>Black Friday Exclusive</h2></li>
+        <li><p>Free Shipping on all orders for VIP 2 and up!</p></li>
+    </ul>
 </section>
-   
 </body>
 </html>
