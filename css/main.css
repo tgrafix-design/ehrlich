@@ -370,7 +370,6 @@ header .right-nav ul li {
 /* Next Inspo */
 .next-inspo {
     background-color: #f2f2f2;
-    width: 100%;
     padding: 60px;
 }
 .next-inspo div.gallery {
@@ -414,4 +413,49 @@ header .right-nav ul li {
     background-color: #000000;
     color: #ffffff;
     margin-top: 30px;
+}
+
+.newsletter-form {
+    background-color: #000000;
+    padding: 16px;
+}
+
+.newsletter-form form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.newsletter-form h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.newsletter-form form span input {
+    font-family: 'Montserrat', sans-serif;
+    width: 315px;
+    display: inline-block;
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.newsletter-form form button {
+    display: inline-block;
+    width: 35px;
+    background-color: #ffffff;
+    border: none;
+    margin-left: -5px;
+    vertical-align: bottom;
+    height: 34px;
+    cursor: pointer;
+}
+
+.newsletter-form form img {
+    display: inline-block;
+    width: 20px;
 }
