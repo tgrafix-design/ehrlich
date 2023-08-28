@@ -81,41 +81,68 @@ header .right-nav ul li {
 }
 
 /* Section Benefits */
-#benefits {
+.benefits {
     background-color: #F2F2F2;
     padding: 10px 20px;
 }
 
-#benefits ul {
+.benefits ul {
     display: flex;
     justify-content: space-between;
 }
 
-#benefits ul li {
+.benefits ul li {
     font-size: 12px;
     line-height: 1.2;
 }
 
-#benefits ul li span {
+.benefits ul li span {
     display: block;
     margin-left: 30px;
     height: 30px;
     line-height: 2.5;
 }
 
-#benefits ul li:nth-child(1) {
+.benefits ul li:nth-child(1) {
     background: url(../img/header-icons/crown.svg) no-repeat left center;
     background-size: 30px;
 }
-#benefits ul li:nth-child(2) {
+
+.benefits ul li:nth-child(2) {
     background: url(../img/header-icons/star.svg) no-repeat left center;
 }
-#benefits ul li:nth-child(3) {
+
+.benefits ul li:nth-child(3) {
     background: url(../img/header-icons/truck.svg) no-repeat left center;
 }
-#benefits ul li:nth-child(4) {
+
+.benefits ul li:nth-child(4) {
     background: url(../img/header-icons/pinmap.svg) no-repeat left center;
 }
-#benefits ul li:nth-child(5) {
+
+.benefits ul li:nth-child(5) {
     background: url(../img/header-icons/shop-tag.svg) no-repeat left center;
+}
+
+/* HERO Sider */
+.hero-slider {
+    display: block;
+    width: auto;
+    height: 650px;
+    background: url(../img/hero/full.jpg) no-repeat center center;
+}
+.hero-slider button {
+    border: none;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    right: 249px;
+    bottom: 133px;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px;
+    -webkit-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+    box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
 }
