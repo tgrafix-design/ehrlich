@@ -138,6 +138,7 @@ header .right-nav ul li {
     background: url(../img/hero/full.jpg) no-repeat center center;
     background-size: cover;
 }
+
 .hero-slider button {
     border: none;
     display: block;
@@ -332,6 +333,7 @@ header .right-nav ul li {
     font-weight: 800;
     text-align: center;
     margin: 50px auto;
+    margin-top: 0;
 }
 
 .recently-bought ul li {
