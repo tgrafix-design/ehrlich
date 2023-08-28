@@ -78,66 +78,6 @@
         </ul>
     </section>
 
-    <style>
-        .trending {
-            display: block;
-            margin: 0 auto;
-            width: auto;
-            max-width: 1060px;
-            padding: 60px;
-        }
-
-        .trending h2 {
-            font-size: 36px;
-            font-weight: 800;
-            text-align: center;
-        }
-
-        .trending p {
-            font-size: 14px;
-            font-weight: 400;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .trending ul.dress {
-            display: grid;
-            grid-template-columns: 225px 225px 225px 225px;
-            grid-gap: 50px 40px;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-
-        .trending ul.dress li img {
-            display: block;
-            width: 225px;
-        }
-
-        .trending ul.dress li p {
-            font-size: 24px;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-top: 16px;
-        }
-
-        .trending ul.hashtag {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .trending ul.hashtag a {
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid #000000;
-            border-radius: 50px;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #000000;
-            margin: 10px;
-        }
-    </style> 
-
     <section class="trending">
         <h2>Now Trending</h2>
         <p>See what everyone&lsquo;s wearing right now</p>
@@ -162,15 +102,137 @@
         </ul>
     </section>
 
-    <section>
+    <style>
+        /* Recently Bought */
+        .recently-bought {
+            padding: 60px;
+        }
+
+        .recently-bought h2 {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .recently-bought ul {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-column-gap: 50px;
+            justify-content: space-between;
+        }
+
+        .recently-bought h2 {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .recently-bought ul li {
+            width: 225px;
+        }
+
+        .recently-bought ul li img {
+            width: 225px;
+        }
+
+        .recently-bought ul li p {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 400;
+            padding: 8px 0;
+        }
+
+        .recently-bought ul li p span {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 600;
+            padding: 8px 0;
+        }
+
+        .recently-bought ul li p.sale span {
+            color: red;
+            font-weight: 800;
+        }
+
+        .recently-bought ul li p.sale del {
+            color: #000000;
+            padding: 8px 30px;
+            font-weight: 600;
+        }
+
+        /* Next Inspo */
+        .next-inspo {
+            background-color: #f2f2f2;
+            width: 100%;
+            padding: 60px;
+        }
+        .next-inspo div.gallery {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-column-gap: 50px;
+            justify-content: space-between;
+        }
+
+        .next-inspo h2 {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .next-inspo p {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .next-inspo div {
+            margin-top: 50px;
+        }
+
+        .next-inspo div img {
+            width: 225px;
+        }
+
+        .next-inspo button {
+            font-family: 'Montserrat', sans-serif;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px 24px;
+            background-color: #000000;
+            color: #ffffff;
+            margin-top: 30px;
+        }
+    </style> 
+
+    <section class="recently-bought">
         <h2>Recently Bought</h2>
-        <ul class="dress">
-            <li><img src="img/recently-bought/festive-looks-rust.jpg" alt="Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit"><p>Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</p></li>
-            <li><img src="img/recently-bought/chevron-flap-crossbody.jpg" alt="Chevron Flap Crossbody Bag"><p>Chevron Flap Crossbody Bag</p></li>
-            <li><img src="img/recently-bought/manila-tan-multi-plaid.jpg" alt="Manila Tan Multi Plaid Oversized Fringe Scarf"><p>Night Out</p></li>
-            <li><img src="img/recently-bought/diamante-puff-sleeve.jpg" alt="Diamante Puff Sleeve Dress - Black"><p>Holidays</p></li>
-            <li><img src="img/recently-bought/banneth-open-front.jpg" alt="Banneth Open Front Formal Dress in Black"><p>Outerwear</p></li>
+        <ul>
+            <li><img src="img/recently-bought/festive-looks-rust.jpg" alt="Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit"><p>Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</p><p><span>$38</span></p></li>
+            <li><img src="img/recently-bought/chevron-flap-crossbody.jpg" alt="Chevron Flap Crossbody Bag"><p>Chevron Flap Crossbody Bag<br /> <br/></p><p class="sale"><span>$5.77<del>$7.35</del></span></p></li>
+            <li><img src="img/recently-bought/manila-tan-multi-plaid.jpg" alt="Manila Tan Multi Plaid Oversized Fringe Scarf"><p>Manila Tan Multi Plaid Oversized Fringe Scarf</p><p class="sale"><span>$29<del>$39</del></span></p></li>
+            <li><img src="img/recently-bought/diamante-puff-sleeve.jpg" alt="Diamante Puff Sleeve Dress - Black"><p>Diamante Puff Sleeve Dress - Black</p><p><span>$45.99</span></p></li>
+            <li><img src="img/recently-bought/banneth-open-front.jpg" alt="Banneth Open Front Formal Dress in Black"><p>Banneth Open Front Formal Dress in Black</p><p class="sale"><span>$69<del>$99.95</del></span></p></li>
         </ul>
+    </section>
+
+    <section class="next-inspo">
+        <h2>Your Next Inspo</h2>
+        <p>Checkout who&lsquo;s wearing what by using #THREADEDInspo on Instagram</p>
+        <div class="gallery">
+            <img src="img/next-inspo/model1.jpg" alt="Model 1" />
+            <img src="img/next-inspo/model2.jpg" alt="Model 2" />
+            <img src="img/next-inspo/model3.jpg" alt="Model 3" />
+            <img src="img/next-inspo/model4.jpg" alt="Model 4" />
+            <img src="img/next-inspo/model5.jpg" alt="Model 5" /> 
+        </div>
+        <button>View All Posts</button>
     </section>
 </body>
 </html>
