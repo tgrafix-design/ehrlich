@@ -241,10 +241,38 @@
 
     #product-dialog .product-details {
         display: flex;
+        margin-bottom: 10px;
     }
 
     #product-dialog .product-details img {
         width: 30%;
+        margin-right: 10px;
+    }
+
+    #product-dialog .product-details .product-note { 
+        font-size: 12px;
+        font-weight: 600;
+        background-color: #fdebeb;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    #product-dialog .product-details .product-name { 
+        font-size: 14px;
+        font-weight: 800;
+        padding: 8px 0;
+    }
+
+    #product-dialog .product-details .product-description { 
+        font-size: 14px;
+        font-weight: 400;
+        padding: 8px 0;
+    }
+
+    #product-dialog .product-details .product-styleno { 
+        font-size: 12px;
+        font-weight: 400;
+        padding: 8px 0;
     }
 
     #product-dialog .payment {
@@ -252,17 +280,14 @@
         margin-top: 10px;
     }
 
-    #product-dialog .payment li {
-        margin-right: 10x;
-    }
-
     #product-dialog .payment img {
         width: 37.5px;
         cursor: pointer;
         border: 1px solid #cccccc;
+        margin-right: 10px;
     }
 </style>
-    <div id="product-dialog">
+    <div id="product-dialog" class="hide">
         <h3>Shopping Bag (<span class="productNumber"></span>)</h3>
         <h5><span>ITEM</span><span>PRICE</span></h5>
 
@@ -278,9 +303,9 @@
     </div>
 
     <script>
+        let productDialog = document.querySelector("#product-dialog")
         let productList = document.querySelector(".product-list")
-        productList.innerHTML="No product selected"
-        console.log(productList)
+        productList.innerHTML="No Product Selected"
 
         let products = document.querySelector(".products")
             products.innerHTML = ""
@@ -295,7 +320,6 @@
                 const result = await response.json()
 
                 result.forEach((e) => {
-                    console.log(productArray)
                     productArray.push(e)
 
                     let status = "buy"
@@ -311,16 +335,19 @@
             }
         }
 
-        const buyProduct = (id)=> {
+        const buyProduct = (id) => {
             if(productArrayID.indexOf(id) === -1) {
                 productArrayID.push(id);
                 // console.log(productArrayID);
             }
         }
 
-        const showList = ()=> {
-            if (productArrayID.length == 0) return
-
+        const showList = () => {
+            productDialog.classList.toggle("hide");
+            if (productArrayID.length == 0) { 
+                productList.innerHTML="No Product Selected"
+                return
+            }
             productList.innerHTML=""
             console.log(productArray)
             productArrayID.forEach((productID) => {
@@ -332,18 +359,22 @@
                 productList.innerHTML += `
                 <div class="product-details">
                 <img src='img/recently-bought/${product.photo}' alt="${product.description}">
-                <div>
-                    <p class="product-note">${product.note}</p>
-                    <p class="product-name">${product.product_name}</p>
-                    <p class="product-description">${product.description}</p>
-                    <p class="product-size">${product.size}</p>
-                    <p class="product-color">${product.color}</p>
-                    <p class="product-styleno">${product.styleno}</p>
-                </div>
+                    <div>
+                        <p class="product-note">${product.note}</p>
+                        <p class="product-name">${product.product_name}</p>
+                        <p class="product-description">${product.description}</p>
+                        <p class="product-size">Size: ${product.size}</p>
+                        <p class="product-color">Color: ${product.color}</p>
+                        <p class="product-styleno">Style: ${product.styleno}</p>
+                        <button onClick="deleteItem(${productID})">Remove</button>
+                    </div>
                 </div>`
             })
+        }
 
-            
+        const deleteItem = (id) => {
+            productArrayID = productArrayID.filter((arrayID) => arrayID !== id)
+            showList()
         }
 
         const clearDialog = (() =>{
