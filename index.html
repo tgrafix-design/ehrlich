@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Erlich Project</title>
 </head>
-<body>
+<body onClick="clearDialog()">
     <style>
 
     </style>
@@ -31,7 +31,7 @@
         <div class="right-nav">
             <ul>
                 <li><img src="img/header-icons/user.svg" alt="User"></li>
-                <li><img src="img/header-icons/shopping-bag.svg" alt="Shopping"></li>
+                <li><img src="img/header-icons/shopping-bag.svg" alt="Shopping" onClick="showList()"></li>
                 <li><img src="img/header-icons/heart.svg" alt="Favorites"></li>
                 <li><img src="img/header-icons/support.svg" alt="Support"></li>
                 <li><img src="img/header-icons/search.svg" alt="Search"></li>
@@ -112,13 +112,6 @@
             </li>
         </ul>
     </section>
-
-    <style>
-        .buy {
-            display: flex;
-            justify-content: space-between;
-        }
-    </style>
 
     <section class="recently-bought">
         <h2>Recently Bought</h2>
@@ -209,28 +202,156 @@
         <a href="#"><img src="img/header-icons/logo.svg" alt="Threaded Fashion"></a>
     </div>
 
+<style>
+    .buy {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    #product-dialog {
+        width: 400px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ffffff;
+        padding: 20px;
+        -webkit-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+        -moz-box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+        box-shadow: 4px 4px 13px 0px rgba(0,0,0,0.44);
+    }
+
+    #product-dialog h5 {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 6000;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    #product-dialog .product-list {
+        border-top: 1px solid #333333;
+        border-bottom: 1px solid #333333;
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    #product-dialog .product-details {
+        display: flex;
+    }
+
+    #product-dialog .product-details img {
+        width: 30%;
+    }
+
+    #product-dialog .payment {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    #product-dialog .payment li {
+        margin-right: 10x;
+    }
+
+    #product-dialog .payment img {
+        width: 37.5px;
+        cursor: pointer;
+        border: 1px solid #cccccc;
+    }
+</style>
+    <div id="product-dialog">
+        <h3>Shopping Bag (<span class="productNumber"></span>)</h3>
+        <h5><span>ITEM</span><span>PRICE</span></h5>
+
+        <div class="product-list"></div>
+        <p>Free Shipping on orders of US$100 or more<br />30 day price match guarantee</p>
+        <ul class="payment">
+            <li><img src="img/footer-icons/payment/visa.jpg" alt="Visa" /></li>
+            <li><img src="img/footer-icons/payment/mastercard.jpg" alt="Mastercard" /></li>
+            <li><img src="img/footer-icons/payment/maestro.jpg" alt="Maestro" /></li>
+            <li><img src="img/footer-icons/payment/american-express.jpg" alt="American Express" /></li>
+            <li><img src="img/footer-icons/payment/paypal.jpg" alt="Paypal" /></li>
+        </ul>
+    </div>
+
     <script>
+        let productList = document.querySelector(".product-list")
+        productList.innerHTML="No product selected"
+        console.log(productList)
+
         let products = document.querySelector(".products")
             products.innerHTML = ""
             console.log(products)
 
-        const fetchUser = async (userId) => {
-            const response = await fetch('js/data.json')
-            const result = await response.json()
+        let productArrayID=[]
+        let productArray=[]
 
-            result.forEach((result) => {
-                console.log(result.description)
-                let status = "buy"
-                let price = `${result.orig_price}`
-                if (result.sale_price) { 
-                    status = "buy sale"
-                    price = `${result.sale_price}<del>${result.orig_price}</del>`
-                }
-                products.innerHTML =  `${products.innerHTML}<li><img src="img/recently-bought/${result.photo}" alt="${result.description}"><p>${result.description}</p><p class="${status}"><span>${price}</span><button>Buy</button></p></li>`
-            })
+        const fetchUser = async () => {
+            try {
+                const response = await fetch('js/data.json')
+                const result = await response.json()
+
+                result.forEach((e) => {
+                    console.log(productArray)
+                    productArray.push(e)
+
+                    let status = "buy"
+                    let price = `${e.orig_price}`
+                    if (e.sale_price) { 
+                        status = "buy sale"
+                        price = `${e.sale_price}<del>${e.orig_price}</del>`
+                    }
+                    products.innerHTML =  `${products.innerHTML}<li><img src="img/recently-bought/${e.photo}" alt="${e.description}"><p>${e.description}</p><p class="${status}"><span>${price}</span><button onClick="buyProduct(${e.id})">Buy</button></p></li>`
+                })
+            } catch(error) {
+                console.log(error)
+            }
         }
 
+        const buyProduct = (id)=> {
+            if(productArrayID.indexOf(id) === -1) {
+                productArrayID.push(id);
+                // console.log(productArrayID);
+            }
+        }
+
+        const showList = ()=> {
+            if (productArrayID.length == 0) return
+
+            productList.innerHTML=""
+            console.log(productArray)
+            productArrayID.forEach((productID) => {
+                const product = productArray.find((el) => el.id == productID);
+
+                // console.log(productArray)
+                // console.log(productID)
+                console.log(product)
+                productList.innerHTML += `
+                <div class="product-details">
+                <img src='img/recently-bought/${product.photo}' alt="${product.description}">
+                <div>
+                    <p class="product-note">${product.note}</p>
+                    <p class="product-name">${product.product_name}</p>
+                    <p class="product-description">${product.description}</p>
+                    <p class="product-size">${product.size}</p>
+                    <p class="product-color">${product.color}</p>
+                    <p class="product-styleno">${product.styleno}</p>
+                </div>
+                </div>`
+            })
+
+            
+        }
+
+        const clearDialog = (() =>{
+
+        })
+
         fetchUser()
+
     </script>
 </body>
 </html>

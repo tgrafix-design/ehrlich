@@ -370,7 +370,7 @@ header .right-nav ul li {
 .recently-bought ul {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-column-gap: 50px;
+    grid-column-gap: 1%;
     justify-content: space-between;
 }
 
@@ -423,7 +423,7 @@ header .right-nav ul li {
 .next-inspo div.gallery {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-column-gap: 50px;
+    grid-column-gap: 1%;
     justify-content: space-between;
 }
 
@@ -540,6 +540,7 @@ footer ul ul.payment li {
 }
 
 footer ul ul.payment li img {
+    border: 1px solid #cccccc;
     width: 37.5px;
     cursor: pointer;
 }
