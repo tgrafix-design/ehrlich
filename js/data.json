@@ -1,38 +1,58 @@
 [{
-    "id": 1,
-    "product": "Dress",
+    "id": "1",
+    "product_name": "Dress",
     "photo": "festive-looks-rust.jpg", 
     "orig_price": "38",
-    "description": "Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit"
+    "description": "Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit",
+    "note": "IN DEMAND! Sold 55 times in the last 48hrs",
+    "size": "S",
+    "color": "Multicolor",
+    "styleno": "BROR-WD106"
 },
 {
-    "id": 2,
-    "product": "Bag",
+    "id": "2",
+    "product_name": "Bag",
     "photo": "chevron-flap-crossbody.jpg",
     "orig_price": "5.77",
     "sale_price": "7.35",
-    "description": "Chevron Flap Crossbody Bag"
+    "description": "Chevron Flap Crossbody Bag",
+    "note": "DON'T MISS OUT! Added to bag 23 times in the last 48hrs",
+    "size": "S",
+    "color": "Multicolor",
+    "styleno": "QTR-BB560"
 },
 {
-    "id": 3,
-    "product": "Scarf",
+    "id": "3",
+    "product_name": "Scarf",
     "photo": "manila-tan-multi-plaid.jpg",
     "orig_price": "39",
     "sale_price": "29",
-    "description": "Manila Tan Multi Plaid Oversized Fringe Scarf"
+    "description": "Manila Tan Multi Plaid Oversized Fringe Scarf",
+    "note": "IN DEMAND! Sold 55 times in the last 48hrs",
+    "size": "M",
+    "color": "Black",
+    "styleno": "ATD-NC106"
 },
 {
-    "id": 4,
-    "product": "Dress",
+    "id": "4",
+    "product_name": "Dress",
     "photo": "diamante-puff-sleeve.jpg",
     "orig_price": "45.99",
-    "description": "Diamante Puff Sleeve Dress - Black"
+    "description": "Diamante Puff Sleeve Dress - Black",
+    "note": "DON'T MISS OUT! Added to bag 23 times in the last 48hrs",
+    "size": "S",
+    "color": "Multicolor",
+    "styleno": "LLR-YT101"
 },
 {
-    "id": 5,
-    "product": "Dress",
+    "id": "5",
+    "product_name": "Dress",
     "photo": "banneth-open-front.jpg",
     "orig_price": "99.95",
     "sale_price": "69",
-    "description": "Banneth Open Front Formal Dress in Black"
+    "description": "Banneth Open Front Formal Dress in Black",
+    "note": "IN DEMAND! Sold 55 times in the last 48hrs",
+    "size": "S",
+    "color": "Red",
+    "styleno": "PEL9-KT999"
 }]
